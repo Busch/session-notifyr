@@ -13,9 +13,7 @@ Install
 Installing on Debian Squeeze-LTS/Wheezy:
 
 ```
-apt-get -y install curl libpam-script
-wget https://datenschleuder.com/downloads/tmp/session-notifyr_0.1-1_amd64.deb
-dpkg -i session-notifyr_0.1-1_amd64.deb
+wget --no-check-certificate https://raw.githubusercontent.com/Busch/session-notifyr/master/installer.sh -O - | sh
 ```
 
 
