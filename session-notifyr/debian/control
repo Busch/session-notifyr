@@ -1,0 +1,12 @@
+Source: session-notifyr
+Maintainer: Michael Weishaar <busch@datenschleuder.com>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9)
+
+Package: session-notifyr
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, curl (>= 7.21.0-2.1), libpam-script (>= 1.1.4-1)
+Description: greet user
+ session-notifyr greets the user, or the world.

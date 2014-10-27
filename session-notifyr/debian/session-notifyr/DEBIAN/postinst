@@ -1,0 +1,50 @@
+#!/bin/sh
+set -e
+
+case "$1" in
+    install)
+        #!/bin/sh install-session-notifyr.sh
+        ;;
+
+    upgrade|abort-upgrade)
+        ;;
+
+    configure)
+
+cat > /usr/share/libpam-script/session-notifyr <<'endmsg'
+#!/bin/sh
+
+stamp=`/bin/date +'%d %m %Y %H %M %S %a'`
+machine=`ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'`
+user=$PAM_USER
+rhost=$PAM_RHOST
+pamsession="SSH Login on $machine:
+User $user from $rhost
+Timestamp: $stamp
+"
+curl -s --form-string "token=aAft9ER6wMZifvmyVmqemK43uS5EbB" \
+--form-string "user=EtrEtbN4UxynxRgNiwX7xT8bosNXj4" \
+--form-string "message=$pamsession" https://api.pushover.net/1/messages.json
+
+exit 0
+endmsg
+
+ln -s -f /usr/share/libpam-script/session-notifyr /usr/share/libpam-script/pam_script_ses_open
+chmod +x /usr/share/libpam-script/session-notifyr
+
+cat >> /etc/pam.d/sshd << 'endmsg'
+# added by session-notifyr
+session    optional     pam_script.so
+endmsg
+
+	;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 0
+        ;;
+esac
+
+
+
+exit 0

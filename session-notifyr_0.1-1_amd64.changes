@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Sun, 26 Oct 2014 23:57:21 +0100
+Source: session-notifyr
+Binary: session-notifyr
+Architecture: source amd64
+Version: 0.1-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: Michael Weishaar <busch@datenschleuder.com>
+Changed-By: Michael Weishaar <busch@datenschleuder.com>
+Description: 
+ session-notifyr - greet user
+Changes: 
+ session-notifyr (0.1-1) UNRELEASED; urgency=low
+ .
+   * Initial release.
+Checksums-Sha1: 
+ 9ef9b33da55c4e48e52a29220613fca83712bd31 823 session-notifyr_0.1-1.dsc
+ 6abff87830328959a1e04a3141f67c0522d0462d 139 session-notifyr_0.1.orig.tar.gz
+ 7748f1bd5113b9d4ca18fa7772a9068845ce318e 1925 session-notifyr_0.1-1.debian.tar.gz
+ 2e3a2c97731e5c4a16ce14b1c6bc4d986c03cfd8 2348 session-notifyr_0.1-1_amd64.deb
+Checksums-Sha256: 
+ 7cf1fe4c65b4d157e71494445049f5086a078a23fa6d695a2bc8236b02004304 823 session-notifyr_0.1-1.dsc
+ f3f6b80c106be897713f8b16ecac6eec9d1dbab2c618948fbaa680aee23b0640 139 session-notifyr_0.1.orig.tar.gz
+ 330c0f46cf9e7b19bd4671d287e397cee852a022f5df1ce7a5b8ae310a01e65b 1925 session-notifyr_0.1-1.debian.tar.gz
+ cecd0c31f379f30be62640425bec736e4d51b3517ca6700fef5f009774074085 2348 session-notifyr_0.1-1_amd64.deb
+Files: 
+ 8f5c9962f1f868b48c8675239f210fbf 823 misc optional session-notifyr_0.1-1.dsc
+ a19f963a5306f7ded0eca11600511dca 139 misc optional session-notifyr_0.1.orig.tar.gz
+ 1908486aaaf2e11cf7f31b54978cd5b2 1925 misc optional session-notifyr_0.1-1.debian.tar.gz
+ c809521c383880d392df59518410893f 2348 misc optional session-notifyr_0.1-1_amd64.deb

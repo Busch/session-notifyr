@@ -1,0 +1,10 @@
+Package: session-notifyr
+Version: 0.1-1
+Architecture: amd64
+Maintainer: Michael Weishaar <busch@datenschleuder.com>
+Installed-Size: 27
+Depends: curl (>= 7.21.0-2.1), libpam-script (>= 1.1.4-1)
+Section: misc
+Priority: optional
+Description: greet user
+ session-notifyr greets the user, or the world.
