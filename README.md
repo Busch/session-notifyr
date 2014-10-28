@@ -13,7 +13,7 @@ Install
 Installing on Debian Squeeze-LTS/Wheezy:
 
 ```
-wget --no-check-certificate https://raw.githubusercontent.com/Busch/session-notifyr/master/installer.sh -O - | sh
+wget https://raw.githubusercontent.com/Busch/session-notifyr/master/installer.sh -O - | sh
 ```
 
 
